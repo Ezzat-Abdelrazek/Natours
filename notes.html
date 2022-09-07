@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced CSS Notes</title>
+  </head>
+  <body>
+    <article>
+      <h2>Building header part 1</h2>
+      <p>
+        Browsers are getting more consistent so we don't need to normalize our
+        css.
+      </p>
+      <p>
+        Background-position always ensure the starting point of the background
+        image.
+      </p>
+      <p>
+        Clip path clip our element or specifiy which part of it should be
+        visible.
+      </p>
+      <p>h1 Is really important for seo so make sure h1 is descriptive.</p>
+      <p>Watch out not all elements should be animated.</p>
+      <p>Hover and active are related to the initial states</p>
+      <p>transition should be on the initial state</p>
+    </article>
+    <article>
+      <h2>Three Pillars</h2>
+      <ul>
+        <li>Responsive Design</li>
+        <li>Maintainable and scalable code</li>
+        <li>Web Performance</li>
+      </ul>
+    </article>
+    <article>
+      <h2>How Css Works Behind the Scenes</h2>
+      <p>
+        Visual Formatting model: An agorthims that render our page using render
+        tree.
+      </p>
+      <h2>How Css is parsed</h2>
+      <p>Cascade algorthim resolve conflicts between declearations</p>
+      <p>Cascades value is the value of the declaration that is applied.</p>
+      <p>
+        There is Our Css Rules(Author) and user rules and browser (User agent
+        rules)
+      </p>
+      <p>How css resolve conflicts between conflicting declearations.</p>
+      <p>Importance => specifity => Source Order</p>
+      <ul>
+        <li>User</li>
+        <li>Author</li>
+        <li>Author Declarations</li>
+        <li>User Declarations</li>
+        <li>User agent declarations</li>
+      </ul>
+      <p>
+        specifity is represented using four numbers each one represented the
+        occurance of a certain selector.
+      </p>
+      <p>
+        The value of the winning declearations is called the cascaded value
+        since it's the result of the cascade algorthim
+      </p>
+      <p>
+        Don't depend on the order of your declearations to resolve conflicts
+      </p>
+      <p>Psudeo class will not work if it's in a less specific Selector</p>
+      <p>Child inherit computed value from it's parents</p>
+      <p>
+        if we used percentage in padding,margin... then the referencee point is
+        the parent width.
+      </p>
+      <p>
+        if we used "em" in padding and margin then the referencee point is the
+        current element.
+      </p>
+      <p>Every CSS must have a value</p>
+      <p>Children inherit the computed value of parent element</p>
+      <p>
+        inherit and initial are used to force inheritance and the initial value
+      </p>
+      <p>
+        it's not a good practice to set the font of html element to an absolute
+        value since this prevent the user from changeing default font size in
+        the browser
+      </p>
+      <p>
+        good practice to set border box on the universal selector to inherit
+        then set it on the body element
+      </p>
+      <p>fill area which is area filled with background color.</p>
+      <p>Normal flow elements are laid out based on the source code</p>
+      <p>
+        Stacking context are what determine in which order elements are render.
+      </p>
+      <p>
+        opacity, transform and filter and a lot of others create a new stacking
+        context.
+      </p>
+      <p>Components are the building blocks of your interface.</p>
+      <p>Components should be independent</p>
+      <p>
+        To identify blocks ask your self if you can use it somewhere else and it
+        will have a meaning, or when it has 2 elements or more and the name is
+        getting out of hand.
+      </p>
+      <p>
+        Component or modifier depend if the element of that component is
+        different completely different.
+      </p>
+      <p>Modifier is the same eleemnt with a slightly different variation.</p>
+      <p>Identify your blocks</p>
+      <p>
+        In BEM A block is a Component and an element is a part of that component
+      </p>
+      <p>Architect: the 7-1 Pattern</p>
+      <ul>
+        <li>Base</li>
+        <li>Components: One file for each componenet</li>
+        <li>Layout</li>
+        <li>Pages</li>
+        <li>Themes</li>
+        <li>Abstracts: Code that doesn't output an certain CSS</li>
+        <li>Vendors: Third Party CSS</li>
+      </ul>
+    </article>
+    <article>
+      <h2>SASS</h2>
+      <p>
+        SASS is CSS preprocessor, which is an extension to CSS that adds power
+        and elegance to the basic language.
+      </p>
+      <p>
+        Called preprocessor because we need to process SASS before sending it.
+      </p>
+      <p>
+        MIXIN Vs function: Function produce a value at the end while mixin
+        don't.
+      </p>
+      <p>
+        SCSS is the same as SASS but with slightly different syntax variation.
+      </p>
+      <h3>Varibales</h3>
+      <p>Variables are identified with the dollar sign.</p>
+      <p>& is equal to the selector path up to this point.</p>
+      <p>Avoid repetition in SASS</p>
+      <p>SASS HAS Great Color function like darken and many more....</p>
+      <p>"@include" is used to include the mixin</p>
+      <p>mixins can have parameters.</p>
+      <p>
+        We use % sign to define a placeholder then we use the extend keyword to
+        extend that placeholder.
+      </p>
+      <p>
+        placeholder doesn't repeat the code while the mixin repeat the code in
+        multiple places in the compiled code.
+      </p>
+      <p>Only use extend for related Selector.</p>
+      <p>Valid css is a valid SCSS</p>
+      <p>
+        in sass we can write hexDecimal in the rgb function and it will be
+        converted for us.
+      </p>
+      <p>BEM Low specifity selector</p>
+      <p>When use nested we encapsulate all related stuff in just one block</p>
+      <p>
+        max-width if the viewport is less than the specified width then
+        max-width will fill 100%
+      </p>
+      <p>
+        by setting value to "auto" then the browser will figure out the value
+        while rendering the site.
+      </p>
+      <p>calc function allow us to mix units in calculations.</p>
+      <p>
+        in sass we can't mix units because a lot of values is figured out during
+        the rendering phase of the website
+      </p>
+      <p>
+        we have to wrap sass variable like this "#{variable}" in order to use in
+        calc function
+      </p>
+      <p>Be crazy with transform.</p>
+      <p>margin: 0 auto don't work on inline block element</p>
+      <p>
+        Utility classes are reusable classes with only one very specific goal
+      </p>
+      <p>Make sure your classes are reusable</p>
+      <p>Use as many utility classes as you want</p>
+      <p>Always think how to make it reusable, independent</p>
+      <p>if it's a small unit you can leave it as pixels</p>
+      <p>blur is probably right</p>
+      <p>make unnoticed changes</p>
+      <p>outline and outline offset are good</p>
+      <p>
+        We can apply affects to other elements when we hover on some of them.
+      </p>
+      <p>
+        i stands for italic but we use it for fonts since any element could
+        work.
+      </p>
+      <p>font icons are just fonts.</p>
+      <p>You are really smart believe that.</p>
+      <p>look for future reusability</p>
+      <p>
+        Don't forget about the existance of figure whenever we have an image
+        with a caption.
+      </p>
+      <p></p>
+    </article>
+  </body>
+</html>

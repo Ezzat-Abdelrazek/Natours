@@ -1,0 +1,106 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: $color-grey-dark;
+}
+
+.heading-primary {
+  backface-visibility: hidden; /*HACK FIX SHACKING ANIMATION */
+
+  color: $color-white;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  margin-bottom: 6rem;
+
+  &--main {
+    animation: moveInLeft 400ms ease-out;
+
+    display: block;
+
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    @include respond(phone) {
+      font-size: 5rem;
+
+      letter-spacing: 1rem;
+    }
+  }
+  &--sub {
+    animation: moveInRight 400ms ease-out;
+
+    display: block;
+
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.6rem;
+
+    text-align: center;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-color: $color-grey-light-1;
+
+  // Defines the cliping area of the background
+  background-clip: text;
+  -webkit-background-clip: text;
+  // Margin 0 auto doesn't work on inline-block element
+
+  color: transparent;
+
+  font-size: 3.5rem;
+  font-weight: 700;
+
+  display: inline-block;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  margin: 0 auto;
+
+  letter-spacing: 2px;
+
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+
+    // SKEWING is Stretching the element
+    transform: skew(15deg, 2deg) scale(1.1);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
